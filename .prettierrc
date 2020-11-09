@@ -1,0 +1,17 @@
+{
+  "bracketSpacing": true,
+  "printWidth": 120,
+  "parser": "babel",
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": false,
+  "overrides": [
+      {
+        "files": "*.scss",
+        "options": {
+          "singleQuote": false
+        }
+      }
+    ]
+}
