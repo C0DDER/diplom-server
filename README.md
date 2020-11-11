@@ -1,1 +1,1 @@
-# diplim-server
+# diplom-server
