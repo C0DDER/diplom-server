@@ -6,8 +6,8 @@ import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 
-import authRote from './rotes/auth';
-import deviceRoute from './rotes/device';
+import authRote from './routes/auth';
+import deviceRoute from './routes/device';
 
 const { NODE_ENV, PORT } = process.env;
 
