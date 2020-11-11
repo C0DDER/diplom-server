@@ -32,6 +32,7 @@ router.post('/register', registerValidate, async (req, res, next) => {
 
 router.post('/login', loginValidate, async (req, res) => {
   const { email, password } = req.body;
+  console.log(req.body);
   
   const user = await User.findOne({
     where: {
@@ -43,10 +44,10 @@ router.post('/login', loginValidate, async (req, res) => {
     const compare = await bcrypt.compare(password, user.password).then(result => result);
 
     if (compare) {
-      res.json({token: createJWT({ uuid: user.uuid}) })
+      return res.json({token: createJWT({ uuid: user.uuid}) })
     }
 
-    res.status(400).json({error: 'wrong password'});
+    return res.status(400).json({error: 'wrong password'});
   }
 
   res.sendStatus(400);
